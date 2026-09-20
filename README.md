@@ -16,6 +16,10 @@ Restart after enabling, disabling or updating these JavaScript mods. If necessar
 
 The ZIP is a repository-ready package; it is not a Firefox extension/XPI. Repository: https://github.com/natsufatsu/zia-media-player
 
+## 1.0.7
+
+The expanded player keeps the mute indicator beside the track metadata and places picture-in-picture, previous, play/pause, next, and close along the bottom row.
+
 ## 1.0.6
 
 Open Zen Settings → Sine Mods → Zia Media Player's settings button to adjust collapsed and expanded background opacity independently from 0 to 100. Changes apply immediately, with defaults of 40% collapsed and 90% expanded. Empty or invalid values use the default; out-of-range values are clamped. Zen's native mute indicator is preserved. Player backgrounds follow the media tab's workspace color and fade smoothly over 300 ms. Bright colors are darkened for readable controls. Background opacity is 40% collapsed and 90% expanded, without fading the text or controls. Artwork glow is preserved and reduced-motion preferences are respected.

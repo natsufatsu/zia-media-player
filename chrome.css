@@ -212,7 +212,20 @@
     font-size: 0.95em !important;
   }
 
-  .zen-media-playpause-button { grid-column: 6; grid-row: 1; }
+  /* Keep the mute state beside the track metadata; playback belongs to the
+     expanded control row with the transport buttons. */
+  .zen-media-mute-button {
+    grid-column: 6;
+    grid-row: 1;
+    justify-self: center !important;
+    max-height: 30px !important;
+    opacity: 1 !important;
+    translate: 0 0 !important;
+    margin-top: 0 !important;
+    pointer-events: auto !important;
+  }
+
+  .zen-media-playpause-button { grid-column: 3; grid-row: 3; }
 
   .zen-media-progress-hbox {
     grid-column: 1 / -1;
@@ -309,13 +322,12 @@
     }
   }
 
-  .zen-media-mute-button { grid-column: 1; grid-row: 3; justify-self: start !important; }
-  .zen-media-previoustrack-button { grid-column: 3; grid-row: 3; }
-  .zen-media-nexttrack-button { grid-column: 4; grid-row: 3; }
-  .zen-media-pip-button { grid-column: 5; grid-row: 3; }
+  .zen-media-pip-button { grid-column: 1; grid-row: 3; justify-self: start !important; }
+  .zen-media-previoustrack-button { grid-column: 2; grid-row: 3; justify-self: start !important; }
+  .zen-media-nexttrack-button { grid-column: 4 / 6; grid-row: 3; }
   .zen-media-close-button { grid-column: 6; grid-row: 3; }
 
-  .zen-media-mute-button,
+  .zen-media-playpause-button,
   .zen-media-previoustrack-button,
   .zen-media-nexttrack-button,
   .zen-media-pip-button,
@@ -394,7 +406,7 @@
       }
     }
 
-    .zen-media-mute-button,
+    .zen-media-playpause-button,
     .zen-media-previoustrack-button,
     .zen-media-nexttrack-button,
     .zen-media-pip-button,
@@ -445,17 +457,6 @@
 }
 
 #zen-media-controls-toolbar:not(:hover) {
-  & .zen-media-mute-button {
-    grid-column: 6;
-    grid-row: 1;
-    justify-self: center !important;
-    max-height: 30px !important;
-    opacity: 1 !important;
-    translate: 0 0 !important;
-    margin-top: 0 !important;
-    pointer-events: auto !important;
-  }
-
   & .zen-media-playpause-button {
     opacity: 0 !important;
     pointer-events: none !important;
