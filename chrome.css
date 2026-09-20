@@ -225,7 +225,8 @@
     pointer-events: auto !important;
   }
 
-  .zen-media-playpause-button { grid-column: 3; grid-row: 3; }
+  /* Span the card so transport alignment is independent of metadata columns. */
+  .zen-media-playpause-button { grid-column: 1 / -1; grid-row: 3; }
 
   .zen-media-progress-hbox {
     grid-column: 1 / -1;
@@ -322,10 +323,20 @@
     }
   }
 
-  .zen-media-pip-button { grid-column: 1; grid-row: 3; justify-self: start !important; }
-  .zen-media-previoustrack-button { grid-column: 2; grid-row: 3; justify-self: start !important; }
-  .zen-media-nexttrack-button { grid-column: 4 / 6; grid-row: 3; }
-  .zen-media-close-button { grid-column: 6; grid-row: 3; }
+  .zen-media-pip-button { grid-column: 1 / -1; grid-row: 3; justify-self: start !important; }
+  .zen-media-previoustrack-button {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    position: relative;
+    inset-inline-start: calc(-25% + 7px);
+  }
+  .zen-media-nexttrack-button {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    position: relative;
+    inset-inline-start: calc(25% - 7px);
+  }
+  .zen-media-close-button { grid-column: 1 / -1; grid-row: 3; justify-self: end !important; }
 
   .zen-media-playpause-button,
   .zen-media-previoustrack-button,

@@ -16,6 +16,10 @@ Restart after enabling, disabling or updating these JavaScript mods. If necessar
 
 The ZIP is a repository-ready package; it is not a Firefox extension/XPI. Repository: https://github.com/natsufatsu/zia-media-player
 
+## 1.0.8
+
+Center play/pause on the full card width and space the bottom controls evenly, independently of the artwork and metadata columns.
+
 ## 1.0.7
 
 The expanded player keeps the mute indicator beside the track metadata and places picture-in-picture, previous, play/pause, next, and close along the bottom row.
