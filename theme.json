@@ -3,7 +3,7 @@
   "name": "Zia Media Player",
   "description": "Artwork player card, workspace colors, playback controls and progress ring.",
   "author": "z1n-k (original Zia)",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "style": {
     "chrome": "chrome.css"
   },
@@ -21,5 +21,6 @@
   "fork": [
     "zen"
   ],
-  "homepage": "https://github.com/natsufatsu/zia-media-player"
+  "homepage": "https://github.com/natsufatsu/zia-media-player",
+  "preferences": "preferences.json"
 }

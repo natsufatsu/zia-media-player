@@ -587,7 +587,32 @@
   }
 
 
+  function watchMediaOpacity() {
+    const prefix = "zia.media-player.opacity.";
+    const defaults = Services.prefs.getDefaultBranch("");
+    const settings = [["collapsed", 40], ["expanded", 90]];
+    for (const [state, value] of settings) {
+      defaults.setStringPref(prefix + state, String(value));
+    }
+    const update = () => {
+      for (const [state, fallback] of settings) {
+        let value = fallback;
+        try {
+          const input = Services.prefs.getStringPref(prefix + state, String(fallback))
+            .trim().replace(/%$/, "").trim();
+          const number = input === "" ? NaN : Number(input);
+          if (Number.isFinite(number)) value = Math.max(0, Math.min(100, number));
+        } catch {}
+        root.style.setProperty(`--zia-media-opacity-${state}`, `${value}%`);
+      }
+    };
+    Services.prefs.addObserver(prefix, update);
+    window.addEventListener("unload", () => Services.prefs.removeObserver(prefix, update), { once: true });
+    update();
+  }
+
   function start() {
+    watchMediaOpacity();
     watchMediaGlow();
     watchMediaTabIcons();
     watchMediaWorkspace();

@@ -482,10 +482,10 @@
 
 /* A translucent workspace tint, with a denser background when expanded. */
 #zen-media-controls-toolbar .zen-media-card {
-  background: color-mix(in srgb, var(--zia-media-space-bg, #66505d) 40%, transparent) !important;
+  background: color-mix(in srgb, var(--zia-media-space-bg, #66505d) var(--zia-media-opacity-collapsed, 40%), transparent) !important;
 }
 #zen-media-controls-toolbar:is(:hover, :focus-within) .zen-media-card {
-  background: color-mix(in srgb, var(--zia-media-space-bg, #66505d) 90%, transparent) !important;
+  background: color-mix(in srgb, var(--zia-media-space-bg, #66505d) var(--zia-media-opacity-expanded, 90%), transparent) !important;
   color: rgb(245, 245, 247) !important;
 }
 #zen-media-controls-toolbar .zen-media-artist {
