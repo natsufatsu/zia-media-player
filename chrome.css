@@ -503,3 +503,9 @@
 #zen-media-controls-toolbar .zen-media-card {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.07) !important;
 }
+
+/* Expanded cards must cover the sidebar and other cards underneath them. */
+#zen-media-controls-toolbar:is(:hover, :focus-within) .zen-media-card {
+  background: rgb(30, 31, 35) !important;
+  color: rgb(245, 245, 247) !important;
+}
