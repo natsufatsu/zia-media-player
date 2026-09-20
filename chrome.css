@@ -62,7 +62,8 @@
       transform 0.35s var(--zia-media-ease),
       opacity 0.3s var(--zia-media-ease),
       filter 0.3s var(--zia-media-ease),
-      height 0.3s var(--zia-media-ease) !important;
+      height 0.3s var(--zia-media-ease),
+      background-color 0.3s ease !important;
 
     &[zen-reindexing] {
       transition: none !important;
@@ -504,8 +505,19 @@
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.07) !important;
 }
 
-/* Expanded cards must cover the sidebar and other cards underneath them. */
+/* Both states use the media tab's workspace hue; expansion stays opaque. */
+#zen-media-controls-toolbar .zen-media-card {
+  background: color-mix(in srgb, var(--zia-media-space-bg, #66505d) 76%, transparent) !important;
+}
 #zen-media-controls-toolbar:is(:hover, :focus-within) .zen-media-card {
-  background: rgb(30, 31, 35) !important;
+  background: var(--zia-media-space-bg, #66505d) !important;
   color: rgb(245, 245, 247) !important;
+}
+#zen-media-controls-toolbar .zen-media-artist {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  #zen-media-controls-toolbar .zen-media-card {
+    transition: none !important;
+  }
 }

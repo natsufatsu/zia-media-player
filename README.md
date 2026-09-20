@@ -16,9 +16,9 @@ Restart after enabling, disabling or updating these JavaScript mods. If necessar
 
 The ZIP is a repository-ready package; it is not a Firefox extension/XPI. Repository: https://github.com/natsufatsu/zia-media-player
 
-## 1.0.1
+## 1.0.2
 
-Expanded player cards use an opaque dark background so sidebar content and other cards do not show through. Artwork glow is preserved.
+Player backgrounds follow the media tab's workspace color and fade smoothly over 300 ms. Bright colors are darkened for readable controls; expanded cards remain opaque. Artwork glow is preserved and reduced-motion preferences are respected.
 
 Update the mod in Sine and restart Zen to apply this version.
 
