@@ -476,31 +476,6 @@
     opacity: 0 !important;
   }
 }
-
-.tab-icon-overlay:not([crashed]):is([soundplaying], [muted]) {
-  list-style-image: var(--zia-sound-wave, url("chrome://sine/content/zia-media-player/icons/sound-wave.svg")) !important;
-  -moz-context-properties: fill !important;
-  fill: rgb(255, 255, 255) !important;
-  background-color: rgba(22, 22, 22, 0.86) !important;
-  background-image: none !important;
-  border-radius: 999px !important;
-  corner-shape: round !important;
-  outline: 0.5px solid rgba(255, 255, 255, 0.18) !important;
-  outline-offset: -0.5px !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35) !important;
-  transition: background-color 0.15s ease !important;
-
-  &[muted] {
-    list-style-image: var(--zia-sound-muted, url("chrome://sine/content/zia-media-player/icons/sound-muted.svg")) !important;
-    fill: rgba(255, 255, 255, 0.8) !important;
-  }
-
-  &:hover {
-    background-color: rgba(48, 48, 48, 0.92) !important;
-  }
-}
-
-
 #zen-media-controls-toolbar .zen-media-card {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.07) !important;
 }

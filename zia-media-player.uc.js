@@ -287,24 +287,9 @@
     watchCardSoundState(card);
   }
 
-  function applyTabSoundBars(tab) {
-    const fresh = freshSoundBars(null);
-    tab.style.setProperty("--zia-sound-wave", fresh.wave);
-    tab.style.setProperty("--zia-sound-muted", fresh.dots);
-  }
-
-  function paintTabSoundBars(tab) {
-    if (tab?.hasAttribute("soundplaying") || tab?.hasAttribute("muted")) {
-      applyTabSoundBars(tab);
-    }
-  }
-
-  function watchTabSoundBars() {
+  function watchMediaTabIcons() {
     gBrowser.tabContainer.addEventListener("TabAttrModified", (event) => {
       const changed = event.detail?.changed || [];
-      if (changed.includes("soundplaying") || changed.includes("muted")) {
-        paintTabSoundBars(event.target);
-      }
       if (changed.includes("image")) {
         for (const element of document.querySelectorAll(".zen-media-card")) {
           const card = element.__ziaCard;
@@ -317,9 +302,6 @@
         }
       }
     });
-    for (const tab of gBrowser.tabs) {
-      paintTabSoundBars(tab);
-    }
   }
 
   const SVG_NS = "http://www.w3.org/2000/svg";
@@ -607,7 +589,7 @@
 
   function start() {
     watchMediaGlow();
-    watchTabSoundBars();
+    watchMediaTabIcons();
     watchMediaWorkspace();
   }
 

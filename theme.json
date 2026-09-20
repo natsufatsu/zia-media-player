@@ -1,9 +1,9 @@
 {
   "id": "zia-media-player",
   "name": "Zia Media Player",
-  "description": "Artwork player card, color glow, progress ring and sound indicators.",
+  "description": "Artwork player card, workspace colors, playback controls and progress ring.",
   "author": "z1n-k (original Zia)",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "style": {
     "chrome": "chrome.css"
   },
