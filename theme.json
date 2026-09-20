@@ -1,0 +1,25 @@
+{
+  "id": "zia-media-player",
+  "name": "Zia Media Player",
+  "description": "Artwork player card, color glow, progress ring and sound indicators.",
+  "author": "z1n-k (original Zia)",
+  "version": "1.0.0",
+  "style": {
+    "chrome": "chrome.css"
+  },
+  "scripts": {
+    "zia-media-player.uc.js": {
+      "include": [
+        "chrome://browser/content/browser.xhtml"
+      ]
+    }
+  },
+  "tags": [
+    "chrome",
+    "zen"
+  ],
+  "fork": [
+    "zen"
+  ],
+  "homepage": "https://github.com/natsufatsu/zia-media-player"
+}
