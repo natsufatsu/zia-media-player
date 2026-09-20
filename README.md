@@ -16,9 +16,9 @@ Restart after enabling, disabling or updating these JavaScript mods. If necessar
 
 The ZIP is a repository-ready package; it is not a Firefox extension/XPI. Repository: https://github.com/natsufatsu/zia-media-player
 
-## 1.0.3
+## 1.0.4
 
-Removed tab audio-icon overrides to avoid an extra box around the favicon; Zen's native mute indicator is preserved. Player backgrounds follow the media tab's workspace color and fade smoothly over 300 ms. Bright colors are darkened for readable controls; expanded cards remain opaque. Artwork glow is preserved and reduced-motion preferences are respected.
+Removed tab audio-icon overrides to avoid an extra box around the favicon; Zen's native mute indicator is preserved. Player backgrounds follow the media tab's workspace color and fade smoothly over 300 ms. Bright colors are darkened for readable controls. Background opacity is 68% collapsed and 90% expanded, restoring subtle transparency without fading the text or controls. Artwork glow is preserved and reduced-motion preferences are respected.
 
 Update the mod in Sine and restart Zen to apply this version.
 
